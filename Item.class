@@ -1,0 +1,45 @@
+public class Item {
+    private double itemPrice;
+    private String itemName;
+    private String itemCode;
+    private int itemStock;
+    private int itemQuantity;
+
+    public Item() {}
+
+    public Item(String code, String name) {
+        this.itemCode = code;
+        this.itemName = name;
+    }
+
+    public Item(String code, String name, double price, int quantity) {
+        this.itemCode = code;
+        this.itemName = name;
+        this.itemPrice = price;
+        this.itemQuantity = quantity;
+    }
+
+    public double getSubTotal() {
+        return itemPrice * itemQuantity;
+    }
+
+    public double getPrice() {
+        return itemPrice;
+    }
+
+    public String getCode() {
+        return itemCode;
+    }
+
+    public String getName() {
+        return itemName;
+    }
+
+    public int getQuantity() {
+        return itemQuantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.itemQuantity = quantity;
+    }
+}
